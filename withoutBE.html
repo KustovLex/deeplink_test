@@ -15,10 +15,13 @@
 
   <script>
     window.onload = function() {
-      document.querySelector('meta[name="og:title"]').setAttribute("content", "New York City Trip");
-      document.querySelector('meta[name="og:image"]').setAttribute("content", "https://static.travelfairy.ai/city-images/70e1fd00-4aeb-461e-9987-04fd420f8d7e/0b8939e5-7293-46da-818c-171458ed0c51/New_York_USA.png");
-      document.querySelector('meta[name="og:description"]').setAttribute("content", "Description of New York City Trip");
-      document.querySelector('title').setAttribute("content", "New York City Trip");
+      // document.querySelector('meta[name="og:title"]').setAttribute("content", "New York City Trip");
+      // document.querySelector('meta[name="og:image"]').setAttribute("content", "https://static.travelfairy.ai/city-images/70e1fd00-4aeb-461e-9987-04fd420f8d7e/0b8939e5-7293-46da-818c-171458ed0c51/New_York_USA.png");
+      // document.querySelector('meta[name="og:description"]').setAttribute("content", "Description of New York City Trip");
+      document.title = "New York City Trip";
+      document.querySelectorAll('meta[property=og\\:title]')[0].setAttribute('content', 'New York City Trip')
+      document.querySelectorAll('meta[property=og\\:image]')[0].setAttribute('content', 'https://static.travelfairy.ai/city-images/70e1fd00-4aeb-461e-9987-04fd420f8d7e/0b8939e5-7293-46da-818c-171458ed0c51/New_York_USA.png')
+      document.querySelectorAll('meta[property=og\\:image]')[0].setAttribute('content', 'Description of New York City Trip')
     }
   </script>
 </body>
