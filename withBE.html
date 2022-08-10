@@ -19,7 +19,31 @@
     window.onload = function () {
       if (/Android|iPhone/i.test(navigator.userAgent)) {
         // true for mobile device
-        location.href = "nology://nology.travel/share-trip?=d0628a4f-66cb-4ee9-b387-54c1553264e2";
+
+        var deeplinkUrl = `nology://nology.travel/share-trip?shareId=a03943f2-3009-406d-965b-5ecb401d45aa`;
+
+        //variable will check app installed or not
+        var change = false;
+        setTimeout(() => {
+          if (!change) {
+            var redirectUrl;
+            if(/Android/i.test(navigator.userAgent)){
+              var redirectUrl = "https://play.google.com/store/apps/details?id=com.mike.unikoom.lucy&shareId=a03943f2-3009-406d-965b-5ecb401d45aa";
+            }
+            if(/iPhone/i.test(navigator.userAgent)){
+              var redirectUrl = "https://apps.apple.com/us/app/travel-nology-ai-trip-planner/id1415635183?shareId=a03943f2-3009-406d-965b-5ecb401d45aa";
+            }
+            window.location = redirectUrl;
+          }
+        }, 400);
+        window.location = deeplinkUrl;
+        //handle event to check app installed or not
+        window.onblur = function () {
+          change = true;
+        };
+        window.onfocus = function () {
+          change = false;
+        }
       } else {
         // false for not mobile device
         document.write(navigator.userAgent);
