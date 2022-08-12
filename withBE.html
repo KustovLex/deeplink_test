@@ -36,7 +36,7 @@
             window.open = redirectUrl;
           }
         }, 400);
-        location.href = deeplinkUrl;
+        window.open = deeplinkUrl;
         //handle event to check app installed or not
         window.onblur = function () {
           change = true;
