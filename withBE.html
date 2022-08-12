@@ -33,10 +33,10 @@
             if(/iPhone/i.test(navigator.userAgent)){
               var redirectUrl = "https://apps.apple.com/us/app/travel-nology-ai-trip-planner/id1415635183?shareId=a03943f2-3009-406d-965b-5ecb401d45aa";
             }
-            window.replace = redirectUrl;
+            window.open = redirectUrl;
           }
         }, 400);
-        window.replace = deeplinkUrl;
+        location.href = deeplinkUrl;
         //handle event to check app installed or not
         window.onblur = function () {
           change = true;
