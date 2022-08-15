@@ -20,7 +20,7 @@
       if (/Android|iPhone/i.test(navigator.userAgent)) {
         // true for mobile device
 
-        var deeplinkUrl = `nology://nology.travel/share-trip?shareId=a03943f2-3009-406d-965b-5ecb401d45aa`;
+        var deeplinkUrl = `https://apps.apple.com/us/app/travel-nology-ai-trip-planner/id1415635183?shareId=283631d0-5fe8-40ce-9055-8e094dc63d47`;
 
         //variable will check app installed or not
         var change = false;
@@ -28,10 +28,10 @@
           if (!change) {
             var redirectUrl;
             if(/Android/i.test(navigator.userAgent)){
-              var redirectUrl = "https://play.google.com/store/apps/details?id=com.mike.unikoom.lucy&shareId=a03943f2-3009-406d-965b-5ecb401d45aa";
+              var redirectUrl = "https://play.google.com/store/apps/details?id=com.mike.unikoom.lucy&shareId=283631d0-5fe8-40ce-9055-8e094dc63d47";
             }
             if(/iPhone/i.test(navigator.userAgent)){
-              var redirectUrl = "https://apps.apple.com/us/app/travel-nology-ai-trip-planner/id1415635183?shareId=a03943f2-3009-406d-965b-5ecb401d45aa";
+              var redirectUrl = "https://apps.apple.com/us/app/travel-nology-ai-trip-planner/id1415635183?shareId=283631d0-5fe8-40ce-9055-8e094dc63d47";
             }
             window.location = redirectUrl;
           }
